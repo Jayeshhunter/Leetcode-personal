@@ -2,7 +2,7 @@ class Solution {
 public:
     int maximumProduct(vector<int>& nums, int k) {
               priority_queue<int,vector<int>,greater<int>> pq;
-        int mod = pow(10,9) + 7;
+        int mod = 1e9 + 7;
         for(auto it:nums){
             pq.push(it);
         }
