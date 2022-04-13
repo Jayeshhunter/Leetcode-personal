@@ -11,10 +11,10 @@ public:
                 ans[i][c2]=++val;
             }
             if(c1 < c2 && r1 < r2){
-                for(int i=c2-1;i>c1;i--){
+                for(int i=c2-1;i>=c1;i--){
                     ans[r2][i] = ++val;
                 }
-                for(int i=r2;i>r1;i--){
+                for(int i=r2-1;i>=r1+1;i--){
                     ans[i][c1] = ++val;
                 }
             }
