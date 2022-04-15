@@ -21,16 +21,15 @@ public:
     Node* connect(Node* root) {
         if(root == NULL) return NULL; 
         queue<Node*> q;
-        vector<Node*> tmp;
         q.push(root);
         while(!q.empty()){
             int n = q.size();
-            for(int i=0;i<n;i++){
+            while(n-- > 0){
                 Node *curr = q.front();
                 q.pop();
-                if(n-1 == i){ //idhar haga mai
+                if(n == 0){ //idhar haga mai
                     curr->next = NULL;
-                }else if(n-1 != i){
+                }else if(n != 0){
                     curr->next = q.front();
                 }
                 
