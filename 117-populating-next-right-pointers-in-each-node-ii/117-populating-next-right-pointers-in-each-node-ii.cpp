@@ -27,7 +27,7 @@ public:
             while(n-- > 0){
                 Node *curr = q.front();
                 q.pop();
-                if(n == 0){ //idhar haga mai
+                if(n == 0){ 
                     curr->next = NULL;
                 }else if(n != 0){
                     curr->next = q.front();
