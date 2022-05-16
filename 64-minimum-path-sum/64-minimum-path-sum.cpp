@@ -3,7 +3,8 @@ public:
     int minPathSum(vector<vector<int>>& grid) {
         int r = grid.size();
         int c = grid[0].size();
-        vector<vector<int>> dp(r,vector<int>(c,grid[0][0]));
+        vector<vector<int>> dp(r,vector<int>(c,0));
+        dp[0][0] = grid[0][0];
         for(int i=1;i<r;i++){
             dp[i][0] = dp[i-1][0] + grid[i][0];
         }
